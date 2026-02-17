@@ -29,7 +29,7 @@ const formattedUpdatedDate = updatedDate
   : null;
 ---
 
-<BaseLayout title={title} description={description} image={heroImage}>
+<BaseLayout title={title} description={description} image={heroImage} type="article" pubDate={pubDate} updatedDate={updatedDate} tags={post.data.tags}>
   <article class="max-w-3xl mx-auto px-6 py-16">
     <!-- Header -->
     <header class="mb-12">

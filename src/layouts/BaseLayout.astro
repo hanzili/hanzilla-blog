@@ -8,15 +8,57 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  type?: 'website' | 'article';
+  pubDate?: Date;
+  updatedDate?: Date;
+  tags?: string[];
 }
 
 const {
   title,
   description = "Hi, I'm Hanzi – building cool things on the internet.",
-  image = '/og-image.png'
+  image = '/og-image.png',
+  type = 'website',
+  pubDate,
+  updatedDate,
+  tags = []
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const fullImageURL = new URL(image, Astro.site).toString();
+const fullTitle = `${title} | Hanzilla`;
+
+// JSON-LD structured data
+const jsonLd = type === 'article'
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description,
+      image: fullImageURL,
+      datePublished: pubDate?.toISOString(),
+      ...(updatedDate && { dateModified: updatedDate.toISOString() }),
+      author: {
+        '@type': 'Person',
+        name: 'Hanzi',
+        url: Astro.site?.toString()
+      },
+      publisher: {
+        '@type': 'Person',
+        name: 'Hanzi'
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': canonicalURL.toString()
+      }
+    }
+  : {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Hanzilla',
+      description,
+      url: Astro.site?.toString()
+    };
 ---
 
 <!DOCTYPE html>
@@ -26,25 +68,38 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" type="application/rss+xml" title="Hanzilla" href={new URL('/rss.xml', Astro.site)} />
 
     <!-- Primary Meta Tags -->
-    <title>{title} | Hanzilla</title>
-    <meta name="title" content={`${title} | Hanzilla`} />
+    <title>{fullTitle}</title>
+    <meta name="title" content={fullTitle} />
     <meta name="description" content={description} />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={`${title} | Hanzilla`} />
+    <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:image" content={fullImageURL} />
+    {type === 'article' && pubDate && (
+      <meta property="article:published_time" content={pubDate.toISOString()} />
+    )}
+    {type === 'article' && updatedDate && (
+      <meta property="article:modified_time" content={updatedDate.toISOString()} />
+    )}
+    {type === 'article' && tags.map((tag) => (
+      <meta property="article:tag" content={tag} />
+    ))}
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={`${title} | Hanzilla`} />
+    <meta property="twitter:title" content={fullTitle} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+    <meta property="twitter:image" content={fullImageURL} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
