@@ -56,10 +56,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Theme Script (runs before page renders to prevent flash) -->
     <script is:inline>
-      const theme = localStorage.getItem('theme') ||
-        (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-      document.documentElement.classList.toggle('light', theme === 'light');
-      document.documentElement.classList.toggle('dark', theme === 'dark');
+      function applyTheme(doc) {
+        var theme = localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        doc.documentElement.classList.toggle('light', theme === 'light');
+        doc.documentElement.classList.toggle('dark', theme === 'dark');
+      }
+      applyTheme(document);
+      document.addEventListener('astro:before-swap', function(e) {
+        applyTheme(e.newDocument);
+      });
     </script>
   </head>
   <body class="bg-background text-foreground min-h-screen flex flex-col">

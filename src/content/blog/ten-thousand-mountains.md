@@ -41,6 +41,8 @@ Today on X it's everywhere. Happy Chinese New Year, seeing lots of people doing 
 
 And then I saw the *We Are the World* performance.
 
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:2rem 0;border-radius:1rem"><iframe src="https://www.youtube.com/embed/24qfjv6KZTM" title="We Are the World — 2026 Spring Festival Gala" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:1rem" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+
 Five years ago I had no confidence in being Chinese. No real sense of who I was. These five years, seeing more, thinking more, I slowly learned to see the world through my own eyes instead of through someone else's narrative. Getting happy Chinese New Year messages from foreign friends, watching more and more people start to actually see China, to care about this holiday, something clicked. A strong sense of cultural identity that wasn't there before. Not the kind that was drilled into me as a kid, standing in the sun reciting socialist core values. This one grew on its own, after going all the way around and coming back.
 
 So maybe those tears weren't just about a song. It was five years of everything, hitting all at once.
