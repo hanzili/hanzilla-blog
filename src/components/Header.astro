@@ -146,9 +146,15 @@ const currentPath = Astro.url.pathname;
 
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenuBtn && mobileMenu) {
+    const header = document.querySelector('header');
+    if (mobileMenuBtn && mobileMenu && header) {
       mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+        const isOpen = !mobileMenu.classList.toggle('hidden');
+        if (isOpen) {
+          header.classList.add('header-blur');
+        } else if (window.scrollY <= 20) {
+          header.classList.remove('header-blur');
+        }
       });
     }
   }
