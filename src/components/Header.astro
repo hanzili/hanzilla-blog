@@ -9,20 +9,20 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-  <nav class="max-w-5xl mx-auto px-6 py-4">
+  <nav class="max-w-5xl mx-auto px-6 py-6">
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <a
         href="/"
-        class="text-xl font-bold text-gray-100 hover:text-yellow-400 transition-colors"
+        class="font-serif text-xl text-foreground hover:opacity-70 transition-opacity"
         transition:name="logo"
       >
-        hanzilla<span class="text-yellow-400">.co</span>
+        hanzilla
       </a>
 
       <!-- Navigation Links -->
-      <div class="flex items-center gap-8">
-        <ul class="hidden sm:flex items-center gap-6">
+      <div class="flex items-center gap-6">
+        <ul class="hidden sm:flex items-center gap-1">
           {navLinks.map(({ href, label }) => {
             const isActive = currentPath === href ||
               (href !== '/' && currentPath.startsWith(href));
@@ -31,10 +31,10 @@ const currentPath = Astro.url.pathname;
                 <a
                   href={href}
                   class:list={[
-                    'text-sm font-medium transition-colors link-underline py-1',
+                    'px-3 py-1.5 text-sm rounded-full transition-colors duration-200',
                     isActive
-                      ? 'text-yellow-400'
-                      : 'text-gray-400 hover:text-gray-100'
+                      ? 'text-foreground font-medium'
+                      : 'text-muted-foreground hover:text-foreground'
                   ]}
                 >
                   {label}
@@ -48,13 +48,13 @@ const currentPath = Astro.url.pathname;
         <button
           id="theme-toggle"
           type="button"
-          class="p-2 rounded-lg text-gray-400 hover:text-gray-100 hover:bg-gray-800 transition-colors"
+          class="p-2 rounded-full text-muted-foreground hover:text-foreground transition-colors"
           aria-label="Toggle dark mode"
         >
           <!-- Sun icon (shown in dark mode) -->
           <svg
             id="sun-icon"
-            class="w-5 h-5 hidden dark:block"
+            class="w-4 h-4 hidden dark:block"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
@@ -76,7 +76,7 @@ const currentPath = Astro.url.pathname;
           <!-- Moon icon (shown in light mode) -->
           <svg
             id="moon-icon"
-            class="w-5 h-5 block dark:hidden"
+            class="w-4 h-4 block dark:hidden"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
@@ -93,7 +93,7 @@ const currentPath = Astro.url.pathname;
         <button
           id="mobile-menu-btn"
           type="button"
-          class="sm:hidden p-2 rounded-lg text-gray-400 hover:text-gray-100 hover:bg-gray-800 transition-colors"
+          class="sm:hidden p-2 rounded-full text-muted-foreground hover:text-foreground transition-colors"
           aria-label="Open menu"
         >
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -106,7 +106,7 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-4 border-t border-gray-700 pt-4">
+    <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-4 border-t border-border pt-4">
       <ul class="flex flex-col gap-4">
         {navLinks.map(({ href, label }) => {
           const isActive = currentPath === href ||
@@ -116,10 +116,10 @@ const currentPath = Astro.url.pathname;
               <a
                 href={href}
                 class:list={[
-                  'block text-sm font-medium transition-colors',
+                  'block text-sm transition-colors',
                   isActive
-                    ? 'text-yellow-400'
-                    : 'text-gray-400 hover:text-gray-100'
+                    ? 'text-foreground font-medium'
+                    : 'text-muted-foreground hover:text-foreground'
                 ]}
               >
                 {label}
@@ -134,7 +134,6 @@ const currentPath = Astro.url.pathname;
 
 <script>
   function setupHeader() {
-    // Theme toggle
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
       themeToggle.addEventListener('click', () => {
@@ -145,7 +144,6 @@ const currentPath = Astro.url.pathname;
       });
     }
 
-    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     if (mobileMenuBtn && mobileMenu) {
@@ -155,7 +153,6 @@ const currentPath = Astro.url.pathname;
     }
   }
 
-  // Run on initial load and after view transitions
   setupHeader();
   document.addEventListener('astro:after-swap', setupHeader);
 </script>

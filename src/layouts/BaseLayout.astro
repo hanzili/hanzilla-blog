@@ -49,7 +49,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
     <!-- View Transitions -->
     <ViewTransitions />
@@ -62,7 +62,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       document.documentElement.classList.toggle('dark', theme === 'dark');
     </script>
   </head>
-  <body class="bg-gray-900 dark:bg-gray-900 light:bg-white min-h-screen flex flex-col">
+  <body class="bg-background text-foreground min-h-screen flex flex-col">
     <Header />
 
     <main class="flex-1">
@@ -86,10 +86,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll(); // Check initial state
+        handleScroll();
       }
 
-      // Run on initial load and after view transitions
       setupHeaderScroll();
       document.addEventListener('astro:after-swap', setupHeaderScroll);
     </script>

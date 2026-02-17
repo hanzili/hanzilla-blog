@@ -18,20 +18,20 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags))];
   <div class="max-w-5xl mx-auto px-6 pt-32 pb-16">
     <!-- Header -->
     <header class="mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4 tracking-tight">
+      <h1 class="text-balance font-serif text-4xl md:text-5xl font-normal text-foreground mb-4">
         Blog
       </h1>
-      <p class="text-xl text-gray-400">
+      <p class="text-lg text-muted-foreground">
         Thoughts on tech, career advice, and building things on the internet.
       </p>
     </header>
 
-    <!-- Tags filter (optional, can be expanded) -->
+    <!-- Tags filter -->
     {allTags.length > 0 && (
       <div class="mb-8 flex flex-wrap gap-2">
-        <span class="text-sm text-gray-500 mr-2">Topics:</span>
+        <span class="text-sm text-muted-foreground mr-2">Topics:</span>
         {allTags.map(tag => (
-          <span class="px-3 py-1 text-sm bg-gray-800 text-gray-300 rounded-full hover:bg-gray-700 transition-colors cursor-pointer">
+          <span class="px-3 py-1 text-sm bg-muted text-muted-foreground rounded-full hover:text-foreground transition-colors cursor-pointer">
             {tag}
           </span>
         ))}
@@ -53,8 +53,8 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags))];
       </div>
     ) : (
       <div class="text-center py-20">
-        <p class="text-gray-500 text-lg">
-          No posts yet. Check back soon! 📝
+        <p class="text-muted-foreground text-lg">
+          No posts yet. Check back soon!
         </p>
       </div>
     )}

@@ -18,11 +18,11 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 
 <a
   href={`/blog/${slug}`}
-  class="group block bg-gray-800 border border-gray-700 rounded-xl overflow-hidden card-hover"
+  class="group block bg-card rounded-2xl overflow-hidden ring-1 ring-foreground/[0.065] shadow-lg shadow-foreground/5 dark:shadow-black/10 transition-all duration-200 hover:ring-foreground/15"
 >
   <!-- Hero Image (optional) -->
   {heroImage && (
-    <div class="img-zoom aspect-video">
+    <div class="aspect-video overflow-hidden">
       <img
         src={heroImage}
         alt={title}
@@ -35,24 +35,24 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 
   <div class="p-6">
     <!-- Date -->
-    <time class="text-sm text-gray-500" datetime={pubDate.toISOString()}>
+    <time class="text-sm text-muted-foreground" datetime={pubDate.toISOString()}>
       {formattedDate}
     </time>
 
     <!-- Title -->
-    <h3 class="text-lg font-semibold text-gray-100 group-hover:text-yellow-400 transition-colors mt-2">
+    <h3 class="font-serif text-xl font-normal text-card-foreground mt-2 group-hover:text-primary transition-colors">
       {title}
     </h3>
 
     <!-- Description -->
     {description && (
-      <p class="text-gray-400 text-sm mt-2 line-clamp-2">
+      <p class="text-muted-foreground text-sm mt-2 line-clamp-2">
         {description}
       </p>
     )}
 
-    <!-- Read more link -->
-    <div class="mt-4 flex items-center gap-2 text-sm text-yellow-400 group-hover:text-yellow-500 transition-colors">
+    <!-- Read more -->
+    <div class="mt-4 flex items-center gap-2 text-sm text-primary transition-colors">
       <span>Read more</span>
       <svg
         class="w-4 h-4 group-hover:translate-x-1 transition-transform"

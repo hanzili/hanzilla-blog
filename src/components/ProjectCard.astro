@@ -12,7 +12,7 @@ const {
   title,
   description,
   href,
-  icon = '🚀',
+  icon = '',
   tags = [],
   isExternal = true
 } = Astro.props;
@@ -22,20 +22,22 @@ const {
   href={href}
   target={isExternal ? '_blank' : '_self'}
   rel={isExternal ? 'noopener noreferrer' : undefined}
-  class="group block p-6 bg-gray-800 border border-gray-700 rounded-xl card-hover"
+  class="group block p-6 bg-card rounded-2xl ring-1 ring-foreground/[0.065] shadow-lg shadow-foreground/5 dark:shadow-black/10 transition-all duration-200 hover:ring-foreground/15"
 >
   <div class="flex items-start gap-4">
     <!-- Icon -->
-    <div class="text-3xl flex-shrink-0" aria-hidden="true">
-      {icon}
-    </div>
+    {icon && (
+      <div class="text-2xl flex-shrink-0" aria-hidden="true">
+        {icon}
+      </div>
+    )}
 
     <div class="flex-1 min-w-0">
       <!-- Title with arrow -->
-      <h3 class="text-lg font-semibold text-gray-100 group-hover:text-yellow-400 transition-colors flex items-center gap-2">
+      <h3 class="font-serif text-lg font-normal text-card-foreground group-hover:text-primary transition-colors flex items-center gap-2">
         {title}
         <svg
-          class="w-4 h-4 text-gray-500 group-hover:text-yellow-400 group-hover:translate-x-1 transition-all"
+          class="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
@@ -50,7 +52,7 @@ const {
       </h3>
 
       <!-- Description -->
-      <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+      <p class="text-muted-foreground text-sm mt-2 leading-relaxed">
         {description}
       </p>
 
@@ -58,7 +60,7 @@ const {
       {tags.length > 0 && (
         <div class="flex flex-wrap gap-2 mt-4">
           {tags.map(tag => (
-            <span class="px-2 py-1 text-xs bg-gray-700 text-gray-300 rounded-md">
+            <span class="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-full">
               {tag}
             </span>
           ))}

@@ -5,57 +5,48 @@ interface Props {
 }
 
 const {
-  title = "Hi, I'm Hanzi 👋",
+  title = "Hi, I'm Hanzi",
   subtitle = "I build things on the internet."
 } = Astro.props;
 ---
 
-<section class="relative min-h-[70vh] flex items-center justify-center px-6 pt-24 pb-16">
-  <!-- Subtle gradient background -->
-  <div class="absolute inset-0 overflow-hidden">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl"></div>
-  </div>
-
-  <div class="relative max-w-3xl text-center">
-    <!-- Main title with staggered animation -->
-    <h1 class="text-5xl md:text-7xl font-bold text-gray-100 mb-6 tracking-tight animate-on-load animate-fade-in-up stagger-1">
+<section class="relative min-h-[60vh] flex items-center justify-center px-6 pt-24 pb-16">
+  <div class="relative max-w-xl text-center">
+    <!-- Main title -->
+    <h1 class="text-balance font-serif text-5xl md:text-6xl font-normal text-foreground mb-6 animate-on-load animate-fade-in-up stagger-1">
       {title}
     </h1>
 
     <!-- Subtitle -->
-    <p class="text-xl md:text-2xl text-gray-400 mb-10 leading-relaxed animate-on-load animate-fade-in-up stagger-2">
+    <p class="text-lg text-muted-foreground mb-10 text-balance animate-on-load animate-fade-in-up stagger-2">
       {subtitle}
     </p>
 
     <!-- CTA Buttons -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-on-load animate-fade-in-up stagger-3">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 animate-on-load animate-fade-in-up stagger-3">
       <a
         href="#projects"
-        class="px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-yellow-400/25"
+        class="px-6 py-2.5 bg-foreground text-background font-medium rounded-full text-sm transition-all duration-200 hover:opacity-90 active:scale-[0.99]"
       >
         View Projects
       </a>
       <a
         href="/blog"
-        class="px-8 py-3 border border-gray-700 hover:border-yellow-400 text-gray-100 font-medium rounded-lg transition-all hover:bg-gray-800"
+        class="px-6 py-2.5 border border-border text-foreground font-medium rounded-full text-sm transition-all duration-200 hover:bg-muted active:scale-[0.99]"
       >
         Read Blog
       </a>
     </div>
 
-    <!-- Quick stats or social proof (optional) -->
-    <div class="mt-16 flex items-center justify-center gap-8 text-sm text-gray-500 animate-on-load animate-fade-in stagger-4">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-        <span>Available for projects</span>
-      </div>
+    <!-- Status -->
+    <div class="mt-16 flex items-center justify-center gap-2 text-sm text-muted-foreground animate-on-load animate-fade-in stagger-4">
+      <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+      <span>Available for projects</span>
     </div>
   </div>
 </section>
 
 <style>
-  /* Trigger animations when page loads */
   .animate-on-load {
     animation-fill-mode: both;
   }
