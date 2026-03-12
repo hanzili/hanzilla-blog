@@ -56,15 +56,13 @@ I understand where they're coming from. CTFs are meant to test your knowledge, a
 
 This vulnerability has existed for 17 years. CSC is still a massive company. The actual financial damage from card fraud is probably small. The status quo has clearly been fine for a long time.
 
-But the economics of exploiting these systems are shifting.
+But the number of people who can do this is growing.
 
-Someone who knew NFC protocols could have done this years ago. But that person could only exploit their own card, in their own building. The security researchers who found these flaws weren't going to build an app and distribute it. That's not what they do. So the damage stayed contained.
+Someone who knew NFC protocols could have done this years ago. The vulnerability has been public since 2008. But it required knowing what a Mifare Classic was, how its sectors worked, and how to write to them. That knowledge was specialized. Most people who had it were security researchers, and they weren't going to exploit their own laundry card. So the damage stayed contained.
 
-AI changes the entire chain. Not just finding the vulnerability, but understanding the system, writing tools, and building something distributable. Before, you needed deep security knowledge AND software skills in the same person to turn a flaw into a product. That combination was rare. AI makes it much less rare. The same tool that helped me crack a card in an hour could help someone package it into an Android app. You don't even need a Flipper Zero. Some phones with NFC can read and write these cards directly.
+AI removes the knowledge barrier. I didn't need to know any of this going in. I pointed an AI at raw card data and it figured out the format, the encoding, and the flaw. Anyone with a Flipper Zero or an NFC-capable phone and some curiosity could do the same thing.
 
-This isn't just about laundry cards. Any system that stores its security on the client, with no server checking whether the data is legitimate, has a version of this problem. NFC cards, offline payment terminals, desktop software with local license checks, browser extensions with client-side paywalls. These systems survived because the knowledge to break them was specialized. AI is making that knowledge accessible to anyone who's curious enough to ask.
-
-For the offline systems, there's an added problem: no server logging transactions, no backend flagging anomalies. The device is the entire system. If someone writes bad data, there's no way to detect it. A software update can't fix it. The only fix is replacing the hardware.
+This isn't just about laundry cards. Any system that stores its security on the client, with no server checking whether the data is legitimate, has a version of this problem. NFC cards, offline payment terminals, desktop software with local license checks, browser extensions with client-side paywalls. These systems survived because understanding them required expertise. That's less true every day.
 
 ---
 
