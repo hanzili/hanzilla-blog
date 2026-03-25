@@ -4,9 +4,11 @@ import type { CollectionEntry } from 'astro:content';
 
 interface Props {
   post: CollectionEntry<'blog'>;
+  prevPost?: CollectionEntry<'blog'> | null;
+  nextPost?: CollectionEntry<'blog'> | null;
 }
 
-const { post } = Astro.props;
+const { post, prevPost, nextPost } = Astro.props;
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
 
 // Calculate reading time (rough estimate: 200 words per minute)
@@ -75,8 +77,26 @@ const formattedUpdatedDate = updatedDate
       <slot />
     </div>
 
+    <!-- Post Navigation -->
+    {(prevPost || nextPost) && (
+      <nav class="mt-16 pt-8 border-t border-border grid grid-cols-2 gap-6">
+        {prevPost ? (
+          <a href={`/blog/${prevPost.slug}`} class="group">
+            <span class="text-xs text-muted-foreground">Older</span>
+            <p class="font-serif text-foreground group-hover:text-primary transition-colors mt-1">{prevPost.data.title}</p>
+          </a>
+        ) : <div />}
+        {nextPost ? (
+          <a href={`/blog/${nextPost.slug}`} class="group text-right">
+            <span class="text-xs text-muted-foreground">Newer</span>
+            <p class="font-serif text-foreground group-hover:text-primary transition-colors mt-1">{nextPost.data.title}</p>
+          </a>
+        ) : <div />}
+      </nav>
+    )}
+
     <!-- Footer -->
-    <footer class="mt-16 pt-8 border-t border-border">
+    <footer class="mt-8 pt-8 border-t border-border">
       <a
         href="/blog"
         class="inline-flex items-center gap-2 text-primary hover:opacity-70 transition-opacity link-underline"
