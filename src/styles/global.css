@@ -65,6 +65,16 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════
+   Focus Styles
+   ═══════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ═══════════════════════════════════════════════════
    Animation Utilities
    ═══════════════════════════════════════════════════ */
 
@@ -75,6 +85,11 @@ body {
 
 .animate-on-load {
   opacity: 0;
+}
+
+/* Fallback: ensure content is visible without JS */
+@supports not (animation-fill-mode: both) {
+  .animate-on-load { opacity: 1; }
 }
 
 /* Link underline animation */

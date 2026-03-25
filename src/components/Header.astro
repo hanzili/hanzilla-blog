@@ -94,7 +94,9 @@ const currentPath = Astro.url.pathname;
           id="mobile-menu-btn"
           type="button"
           class="sm:hidden p-2 rounded-full text-muted-foreground hover:text-foreground transition-colors"
-          aria-label="Open menu"
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="4" x2="20" y1="12" y2="12"/>
@@ -150,10 +152,23 @@ const currentPath = Astro.url.pathname;
     if (mobileMenuBtn && mobileMenu && header) {
       mobileMenuBtn.addEventListener('click', () => {
         const isOpen = !mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
         if (isOpen) {
           header.classList.add('header-blur');
-        } else if (window.scrollY <= 20) {
-          header.classList.remove('header-blur');
+          const firstLink = mobileMenu.querySelector('a');
+          if (firstLink) firstLink.focus();
+        } else {
+          if (window.scrollY <= 20) header.classList.remove('header-blur');
+          mobileMenuBtn.focus();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          if (window.scrollY <= 20) header.classList.remove('header-blur');
+          mobileMenuBtn.focus();
         }
       });
     }

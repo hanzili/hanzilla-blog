@@ -26,18 +26,6 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags))];
       </p>
     </header>
 
-    <!-- Tags filter -->
-    {allTags.length > 0 && (
-      <div class="mb-8 flex flex-wrap gap-2">
-        <span class="text-sm text-muted-foreground mr-2">Topics:</span>
-        {allTags.map(tag => (
-          <span class="px-3 py-1 text-sm bg-muted text-muted-foreground rounded-full hover:text-foreground transition-colors cursor-pointer">
-            {tag}
-          </span>
-        ))}
-      </div>
-    )}
-
     <!-- Posts Grid -->
     {posts.length > 0 ? (
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
