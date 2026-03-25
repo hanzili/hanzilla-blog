@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '@vercel/analytics/astro';
 import '../styles/global.css';
 
 interface Props {
@@ -109,8 +110,6 @@ const jsonLd = type === 'article'
     <!-- View Transitions -->
     <ViewTransitions />
 
-    <!-- Analytics -->
-    <script defer src="/_vercel/insights/script.js"></script>
 
     <!-- Theme Script (runs before page renders to prevent flash) -->
     <script is:inline>
@@ -135,6 +134,7 @@ const jsonLd = type === 'article'
     </main>
 
     <Footer />
+    <Analytics />
 
     <!-- Scroll-based header blur effect -->
     <script>
