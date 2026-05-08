@@ -12,7 +12,7 @@ At first, ESG sounded like one of those boring corporate acronyms I vaguely unde
 
 Then I started talking to people.
 
-I talked to founders, consultants, people who work with suppliers, people who prepare customer compliance requests, people who understand food and packaging, and older operators who have actually spent decades around manufacturing and supply chains. Not startup people guessing from the outside. People who have seen how messy this work is in real companies.
+I talked to founders, consultants, people who work with suppliers, people who prepare customer compliance requests, people who understand food and packaging, and older operators who have actually spent decades around manufacturing and supply chains.
 
 The more I listened, the more I realized ESG was not really the thing I was interested in.
 
@@ -30,21 +30,25 @@ The real version is much uglier.
 
 ---
 
-A buyer asks a supplier for proof.
+A company asks another company for proof.
 
 Maybe Walmart wants packaging information. Maybe a food brand wants facility certificates. Maybe a retailer portal asks about emissions. Maybe an auditor asks for sourcing documentation. Maybe a procurement team wants to know whether a product meets some customer requirement.
 
 From the outside, the request looks simple. Fill in the form. Upload the document. Submit before the deadline.
 
-But inside the supplier, that simple request can turn into a long chain of work.
+But inside the company receiving the request, that simple ask can turn into a long chain of work.
 
 The evidence might be in an email. Or a PDF. Or an old spreadsheet. Or a shared drive. Or an ERP export. Or a certificate from three years ago. Or a consultant's folder. Or a WeChat message. Or someone's memory.
 
-Sometimes the document exists but nobody knows where it is. Sometimes it exists but it is expired. Sometimes it proves the right thing for the wrong facility. Sometimes it covers the company but not the product. Sometimes the supplier has to ask *their* supplier for proof. Sometimes the data does not exist yet and has to be created. Sometimes the answer is sensitive because sharing too much could expose costs, supplier relationships, legal risk, or weaknesses the buyer did not know about.
+Sometimes the document exists but nobody knows where it is. Sometimes it exists but it is expired. Sometimes it proves the right thing for the wrong facility. Sometimes it covers the company but not the product. Sometimes the company has to ask *its own* supplier for proof. Sometimes the data does not exist yet and has to be created.
+
+And sometimes the answer is sensitive.
+
+Sharing too much could expose costs, supplier relationships, legal risk, operational weaknesses, or data the company is not comfortable sending outside.
 
 That is when I started to understand the real problem.
 
-Supply chain transparency is not just data collection.
+Supply-chain transparency is not just data collection.
 
 It is evidence, judgment, and disclosure.
 
@@ -52,55 +56,39 @@ It is evidence, judgment, and disclosure.
 
 The India and China conversations made this much more obvious.
 
-From people connected to Indian suppliers, I heard a very practical version of the problem. A Western buyer says “sustainability” or “compliance.” The supplier hears another unpaid administrative burden, another portal, another customer risk, and another thing that might affect whether they keep the business. It is not that suppliers do not care. It is that they have factories to run, margins to protect, and systems that were not built for this level of reporting.
+From people connected to Indian suppliers, I heard a very practical version of the problem. A Western customer says “sustainability” or “compliance.” The supplier hears another unpaid administrative burden, another portal, another customer risk, and another thing that might affect whether they keep the business. It is not that suppliers do not care. It is that they have factories to run, margins to protect, and systems that were not built for this level of reporting.
 
 From people connected to Chinese suppliers, I heard an extra layer: disclosure itself can be sensitive.
 
-This is where the supply chain stops being a clean diagram and becomes a real network of companies, countries, incentives, and laws. A supplier in China is not just deciding whether to be transparent. They may also be deciding what information is safe to provide, what can leave the company, what can leave the country, and what could create risk if interpreted the wrong way.
+A company in China is not just deciding whether to be transparent. It may also be deciding what information is safe to provide, what can leave the company, what can leave the country, and what could create risk if interpreted the wrong way.
 
-China is an easy example because the pressure goes both ways. The country is increasing sustainability disclosure for listed companies, but it also has strict data and national-security rules around what data can be collected, processed, and transferred. I am not saying a packaging certificate is a national-security issue. That would be ridiculous. But the point is that the legal and political environment changes how suppliers think.
+I am not saying a packaging certificate is a national-security issue. That would be ridiculous. But the legal and political environment changes how suppliers think about disclosure.
 
-If a foreign buyer asks for facility-level data, supplier lists, labor information, sourcing details, production records, or material composition, a supplier may not treat it as a simple customer-service task.
+If a foreign customer asks for facility-level data, supplier lists, labor information, sourcing details, production records, or material composition, the supplier may not treat it as a simple customer-service task.
 
 They may treat it as a disclosure decision.
 
-That is the part a lot of transparency software misses. It assumes the supplier just needs a better form. But sometimes the supplier needs to know: do we have the evidence, is it valid, are we allowed to share it, who approves it, and what risk are we taking by sending it?
+That is the part a lot of transparency software misses. It assumes the company just needs a better form. But often the real questions are: do we have the evidence, is it valid, are we allowed to share it, who approves it, and what risk are we taking by sending it?
 
 ---
 
-Most supply-chain software starts from the buyer's point of view.
+Another thing I got wrong at first was the buyer-supplier framing.
 
-That makes sense. Buyers have budgets. Buyers have power. Buyers are the ones creating the requirements. If you sell to a large enterprise, you can say: we will help you collect supplier data, score risk, run audits, track ESG metrics, and make your supply chain more transparent.
+It is tempting to describe the problem as a big buyer chasing a smaller supplier. Sometimes that is true. But in a real supply chain, the buyer is usually also someone else's supplier.
 
-But even the word “buyer” is a little misleading.
+A packaging company buys material from one company and sells packaging to a food brand. The food brand buys from packaging and ingredient suppliers, then sells to a retailer. The retailer answers to customers, regulators, investors, and its own reporting obligations.
 
-In a real supply chain, the buyer is usually also someone else's supplier. A packaging company buys material from one company and sells packaging to a food brand. The food brand buys from packaging and ingredient suppliers, then sells to a retailer. The retailer answers to customers, regulators, investors, and its own reporting obligations.
+So the pressure does not move in one clean direction. It gets pushed down the chain unevenly.
 
-So the pressure does not come from one powerful buyer chasing one passive supplier. It moves down the chain unevenly.
+At the top, the pressure may be intense: regulators, public companies, retailers, big brands, auditors. By the time that pressure reaches a mid-chain company, it may be weaker, delayed, confusing, or inconsistent.
 
-At the top, the pressure may be intense: regulators, public companies, retailers, big brands, auditors. But by the time that pressure reaches a mid-chain company, it may be weaker, delayed, confusing, or inconsistent. If nobody is forcing the company to produce clean compliance data yet, it often will not invest much in building that muscle.
+If nobody is forcing the company to produce clean compliance data yet, it often will not invest much in building that muscle.
 
 That is not stupidity. It is rational. Compliance data is expensive to maintain when the business consequence is still vague.
 
-But this creates a weird illusion.
+But once the pressure becomes real, the company suddenly has to answer questions it was never organized to answer.
 
-From the buyer side, the problem looks like missing fields in a dashboard.
-
-From the supplier side, the problem feels completely different.
-
-It is not “please type an answer into this box.” It is: can we prove this claim, with the right evidence, for the right product, facility, year, and methodology, without creating legal or commercial risk, before the customer gets annoyed?
-
-Those are not the same problem.
-
-A buyer sees a missing field.
-
-A supplier sees a chain of work: find the owner, find the document, check if it is valid, ask another vendor, update the certificate, normalize the data, decide what can be disclosed, write the explanation, keep a record of what was sent, and hope the buyer accepts it.
-
-This is why I think a lot of supply-chain transparency products feel more complete than they really are.
-
-They organize the request.
-
-They don't complete the work.
+That is when the paperwork starts to hurt.
 
 ---
 
@@ -122,23 +110,21 @@ The broader category was external evidence requests.
 
 But I would not lead with that phrase.
 
-Nobody wakes up thinking, “I need an external evidence request platform.” They think: Walmart is asking for packaging proof. A customer needs compliance documentation. A vendor packet is incomplete. A regulator needs a report. An auditor wants evidence. A buyer wants to know if a supplier can be trusted.
+Nobody wakes up thinking, “I need an external evidence request platform.” They think: Walmart is asking for packaging proof. A customer needs compliance documentation. A vendor packet is incomplete. A regulator needs a report. An auditor wants evidence. A buyer wants to know if a company can be trusted.
 
 That is why I keep coming back to supply-chain trust.
 
-Supply chain trust is the human version of the problem. One company needs to trust another company enough to buy from it, approve it, pay it, report on it, or let it keep operating in the network. The paperwork is just how that trust gets negotiated.
+Supply-chain trust is the human version of the problem. One company needs to trust another company enough to buy from it, approve it, pay it, report on it, or let it keep operating in the network.
 
-So the wedge is supply chain.
-
-The deeper problem is proof.
+The paperwork is just how that trust gets negotiated.
 
 ---
 
 The sharpest way I can describe it is this:
 
-**Supply chain trust is still being rebuilt from scratch every time someone asks for it.**
+**Supply-chain trust is still being rebuilt from scratch every time someone asks for it.**
 
-A supplier answers one customer request in March. Then another customer asks a similar question in May. Then an auditor asks again in July. Then a retailer portal asks for the same certificate in a slightly different format. Then a consultant asks for the methodology behind the number.
+A company answers one customer request in March. Then another customer asks a similar question in May. Then an auditor asks again in July. Then a retailer portal asks for the same certificate in a slightly different format. Then a consultant asks for the methodology behind the number.
 
 Each time, someone starts over.
 
@@ -146,13 +132,13 @@ They search the same folders. They forward the same emails. They ask the same in
 
 That is insane.
 
-If a supplier has already proved something once, that proof should become reusable.
+If a company has already proved something once, that proof should become reusable.
 
-Not public. Not dumped into some global database. Not exposed to every buyer by default.
+Not public. Not dumped into some global database. Not exposed to every customer by default.
 
 Reusable inside the company, with permissions, context, and memory.
 
-Which customer accepted this certificate? Which product did it cover? Which facility? Which year? Who approved sharing it? What evidence was missing last time? Which upstream supplier did we have to chase? Which answer did the buyer reject? When does this expire?
+Which customer accepted this certificate? Which product did it cover? Which facility? Which year? Who approved sharing it? What evidence was missing last time? Which upstream supplier did we have to chase? Which answer did the customer reject? When does this expire?
 
 That is the data that matters.
 
@@ -162,35 +148,17 @@ The history of how the document was used to create trust.
 
 ---
 
-This is also why I think the ESG conversation is misleading.
+This is why I do not think the interesting company here is “AI for ESG reports.”
 
-People hear ESG and immediately think politics, greenwashing, carbon accounting, or corporate theatre. Some of that criticism is fair. A lot of ESG reporting is bloated. A lot of it did become checkbox work.
-
-But underneath the acronym is a very real operational shift: large companies are pushing more proof requirements onto their suppliers.
-
-Food safety. Packaging. Labor. Sourcing. Emissions. Certifications. Audit readiness. Country of origin. Recyclability. Chemical restrictions. Supplier diversity. Insurance. Security. Quality.
-
-The labels change, but the pattern is the same.
-
-A bigger company asks a smaller company to prove something before it keeps buying from them.
-
-That will not go away even if people stop saying ESG.
-
-If anything, it gets bigger as regulation increases, customers become more cautious, and companies try to de-risk their supply chains.
-
-So I don't think the interesting company here is “AI for ESG reports.”
-
-I think the interesting company is an AI evidence agent for supply-chain trust.
-
----
+The interesting company is an AI evidence agent for supply-chain trust.
 
 The first version should probably look boring.
 
 Not a giant platform. Not another dashboard with 50 charts. Not a magic AI agent that claims it can automate compliance while ignoring all the messy human judgment.
 
-Start with one painful workflow: a supplier receives a customer compliance request and needs to get it ready for review.
+Start with one painful workflow: a company receives a customer compliance request and needs to get it ready for review.
 
-The AI agent should take the messy input: the questionnaire, portal export, emails, certificates, spreadsheets, old submissions, policy docs, screenshots, ERP exports, consultant notes.
+The agent should take the messy input: the questionnaire, portal export, emails, certificates, spreadsheets, old submissions, policy docs, screenshots, ERP exports, consultant notes.
 
 Then it should do the work a good operations person would do if they had infinite patience.
 
@@ -202,25 +170,33 @@ That is not the point.
 
 The point is to turn the chaos before review into a structured evidence workflow. By the time a human reviews the response, they should not be staring at a blank portal and a folder full of PDFs. They should see: here is the question, here is the best evidence we found, here is why it matches, here is what is missing, here is who needs to approve it, and here is what we sent last time.
 
-The early version can be service-heavy. Honestly, it probably should be.
+---
 
-You learn the real workflow by doing the ugly work manually first. Which questions are ambiguous. Which evidence gets rejected. Which documents are sensitive. Which suppliers never respond. Which claims need accountants, consultants, certifiers, or legal review. Which parts AI can do safely and which parts need a human.
+I also do not think this has to start as one fixed software product.
 
-Then the software compounds around the repeated motion.
+The right first version should fit the company, not the other way around.
 
-Every completed request teaches the system something reusable. This buyer accepts this kind of evidence. This certificate maps to these questions. This facility has this owner. This upstream supplier is the bottleneck. This emissions number needs this methodology. This document expires in November. This answer needs approval before disclosure.
+For one team, it might be a fully outsourced service: send us the request, the messy folder, the old submissions, and the context, and we help get the response ready for review.
 
-Over time, the supplier is not just answering requests faster.
+For another team, it might be an internal agent that behaves like a new compliance operations teammate. It reads the request, finds evidence, drafts follow-ups, updates the tracker, and escalates the parts that need human judgment.
 
-It is building an internal memory of what it can prove.
+For another team, it might be a copilot for the person who is already drowning in this work. Not replacing them. Just giving them a second brain for chasing, checking, remembering, and packaging proof.
+
+I care less about the shape than the workflow.
+
+The question is not “do you want to buy another platform?”
+
+The question is: when a customer, auditor, regulator, or partner asks you for proof, does your team already have a reliable way to turn messy evidence into a defensible answer?
+
+If the answer is no, that is where I want to start.
 
 ---
 
 That is the part I care about.
 
-A good supplier should be able to prove itself faster.
+A good company should be able to prove itself faster.
 
-A buyer should be able to trust good suppliers without forcing them through the same paperwork hell every quarter.
+A customer should be able to trust good companies without forcing them through the same paperwork hell every quarter.
 
 Bad claims should be harder to hide, but good companies should not be punished for having messy folders and limited compliance staff.
 
@@ -228,7 +204,7 @@ Right now, the system rewards whoever is best at filling portals, not necessaril
 
 That is backwards.
 
-Supply chain transparency will not be fixed by asking suppliers for more data in more portals.
+Supply-chain transparency will not be fixed by asking companies for more data in more portals.
 
 It gets fixed when proof becomes reusable.
 
