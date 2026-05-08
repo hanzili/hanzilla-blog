@@ -72,6 +72,16 @@ Most supply-chain software starts from the buyer's point of view.
 
 That makes sense. Buyers have budgets. Buyers have power. Buyers are the ones creating the requirements. If you sell to a large enterprise, you can say: we will help you collect supplier data, score risk, run audits, track ESG metrics, and make your supply chain more transparent.
 
+But even the word “buyer” is a little misleading.
+
+In a real supply chain, the buyer is usually also someone else's supplier. A packaging company buys material from one company and sells packaging to a food brand. The food brand buys from packaging and ingredient suppliers, then sells to a retailer. The retailer answers to customers, regulators, investors, and its own reporting obligations.
+
+So the pressure does not come from one powerful buyer chasing one passive supplier. It moves down the chain unevenly.
+
+At the top, the pressure may be intense: regulators, public companies, retailers, big brands, auditors. But by the time that pressure reaches a mid-chain company, it may be weaker, delayed, confusing, or inconsistent. If nobody is forcing the company to produce clean compliance data yet, it often will not invest much in building that muscle.
+
+That is not stupidity. It is rational. Compliance data is expensive to maintain when the business consequence is still vague.
+
 But this creates a weird illusion.
 
 From the buyer side, the problem looks like missing fields in a dashboard.
