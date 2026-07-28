@@ -333,7 +333,7 @@ function Footer() {
           </div>
         </div>
         <div className="foot-bottom">
-          <span>© 2026 Hanzi Li. All rights reserved (but plz steal ideas).</span>
+          <span>© 2026 Hanzi Li · operated by 1583523 B.C. LTD., Vancouver BC. All rights reserved (but plz steal ideas).</span>
           <span>last updated: today, while procrastinating</span>
         </div>
       </div>

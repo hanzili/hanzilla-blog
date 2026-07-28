@@ -30,6 +30,14 @@ window.TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 <body>
 <div id="root"></div>
 
+<!-- Static legal footer: lives outside the React root so it is in the served HTML
+     even before (or without) JS. Platform verifications look for the legal name here. -->
+<footer id="legal-entity" style="font:400 13px/1.7 system-ui,sans-serif;opacity:.65;text-align:center;padding:28px 16px 40px">
+  hanzilla.co is operated by <strong>1583523 B.C. LTD.</strong>,
+  788 Beatty Street, Vancouver, British Columbia V6B 2M1, Canada.
+  Contact <a href="mailto:hi@hanzilla.co">hi@hanzilla.co</a>.
+</footer>
+
 <script type="text/babel" src="components.jsx"></script>
 <script type="text/babel" src="sections.jsx"></script>
 <script type="text/babel" src="tweaks-panel.jsx"></script>
