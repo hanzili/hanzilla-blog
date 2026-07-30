@@ -28,6 +28,15 @@ window.TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 </script>
 </head>
 <body>
+
+<!-- Static business-entity banner: rendered before (and without) JS so it is in the served HTML
+     and visible at the top of the page. Platform verifications look for the legal name here. -->
+<div id="operating-entity" style="background:#181613;color:#f4f4f0;font:400 13.5px/1.6 system-ui,-apple-system,sans-serif;padding:11px 16px;text-align:center">
+  This website is operated by <strong style="color:#fff">1583523 B.C. LTD.</strong>
+  (incorporation number BC1583523), 788 Beatty Street, Vancouver, British Columbia V6B 2M1, Canada
+  &nbsp;·&nbsp; <a href="mailto:hi@hanzilla.co" style="color:#F4E24A">hi@hanzilla.co</a>
+</div>
+
 <div id="root"></div>
 
 <!-- Static legal footer: lives outside the React root so it is in the served HTML
